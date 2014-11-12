@@ -229,7 +229,7 @@ ul.menu li {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-ul.menu li:hover,ul.menu li:focus {
+ul.menu li:hover,ul.menu li:focus, ul.menu li.selected {
   background: #f2af1f;
   color: #4b2909;
 }
@@ -274,7 +274,7 @@ ul.menu li a {
   text-decoration: none;
   font-weight: 400;
 }
-ul.menu li:hover a {
+ul.menu li:hover a, ul.menu li.selected a {
     color:#4b2909 !important; 
 }
 
@@ -660,29 +660,31 @@ section.projects .more {
 
 section.projects .projects-container {
     clear: both;
-    text-align: left;
+    text-align: center;
     position: relative;
+    margin-left: -2.5%;
+    font-size: 0px;
 }
 
 section.projects .projects-container figure {
     display: inline-block;
-    width: 235px;
-    margin-right: 1%;
     text-align: left;
     vertical-align: top;
+    width: 22.5%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    margin: 0 0 2.5% 2.5%;
 }
 
 section.projects .projects-container img {
+    max-width: 100%;
+	height: auto;
     padding-bottom: 20px;
 }
 
 section.projects .projects-container a {
     font-size: 18px;
-}
-
-section.projects .projects-container figure:last-child {
-    margin-right: 0;
-
 }
 
 section.projects .projects-container .arrow-next {
@@ -1250,19 +1252,96 @@ a.leave-feedback:hover {
    
 /* End of Feedback */
 
+/* Projects */
+
+.projects {
+    margin: 0 10px;
+}
+
+.projects h1{
+    float: left;
+}
+
+.projects .form-group-drop{
+    float: right;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.projects .form-group-drop label {
+    margin-right: 20px;
+}
+
+.project-list {
+    font-size: 0px;
+    margin-left: -2.5%; /* should match li left margin */
+    vertical-align: text-top;
+    clear: both;
+}
+
+ul.project-list li {
+	display: inline-block;
+	margin: 0 0 2.5% 2.5%;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    
+}
+
+ul.project-list img {
+    overflow: hidden;
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+    -webkit-transition: all 0.8s ease;
+     -moz-transition: all 0.8s ease;
+       -o-transition: all 0.8s ease;
+      -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul.project-list a {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+ul.project-list h3 {
+    margin-top: 5px;
+    margin: 5px 0 5px;
+}
+
+ul.project-list li p {
+    font-size: 14px;
+	line-height: 1.5em;
+}
+
+ul.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+
+/* End of Projects */
+
 
 @media all and (max-width: 1150px) {
     
 h1 {
     font-size: 30px;;
 }    
-    
+/*    
 section.projects .projects-container figure {
     width: 260px;
 }
 section.projects .projects-container figure:last-child {
     display: none;
 }
+*/
     
 .service ul li {
     font-size: 18px;;
