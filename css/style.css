@@ -880,13 +880,14 @@ footer .contacts li.mail:before {
 }
 
 .page-content .left-menu .menu {
-    min-width: 245px;
+
 }
 
 .left-menu ul li{
     display: block;
-    min-width: 220px;
-
+    float: left;
+    clear: both;
+    min-width: 140px;
 }
 
 .left-menu ul li a{
@@ -894,7 +895,7 @@ footer .contacts li.mail:before {
     font-size: 18px;
     font-weight: 500;
     padding-left: 10px;
-    height: 40px;
+    min-height: 40px;
     vertical-align:middle;
     line-height: 40px;
 }
@@ -1178,6 +1179,8 @@ a.leave-feedback:hover {
     width: 99%;
     margin-right: 20px;
     position: relative;
+    display: block;
+    clear: both;
 }
 
 .paging .arr-back {
@@ -1254,11 +1257,15 @@ a.leave-feedback:hover {
 
 /* Projects */
 
-.projects {
+.projects, .objects {
     margin: 0 10px;
 }
 
-.projects h1{
+.project-item {
+    position: relative;
+}
+
+.projects h1, .objects h1{
     float: left;
 }
 
@@ -1292,19 +1299,9 @@ ul.project-list li {
 }
 
 ul.project-list img {
-    overflow: hidden;
 	max-width: 100%;
 	height: auto;
 	margin: 0 0 10px;
-    -webkit-transition: all 0.8s ease;
-     -moz-transition: all 0.8s ease;
-       -o-transition: all 0.8s ease;
-      -ms-transition: all 0.8s ease;
-          transition: all 0.8s ease;
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-      -ms-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 ul.project-list a {
@@ -1320,13 +1317,174 @@ ul.project-list h3 {
 ul.project-list li p {
     font-size: 14px;
 	line-height: 1.5em;
+    background-attachment: fixed;
 }
+
 
 ul.columns-3 li {
 	width: 30.83%; /* this value + 2.5 should = 33% */
 }
 
+ul.columns-4 li {
+    width: 22.5%;
+}
+
 /* End of Projects */
+
+
+/* Objects */
+
+
+
+.objects h1 {
+    margin-bottom: 20px;
+}
+
+.objects .filters {
+    background: #f6f6f6;
+    padding: 2%;
+    float: left;
+    clear: both;
+    width: 96%;
+    margin-bottom: 30px;
+
+}
+
+.objects .filters .form-group-drop{
+    float: left;
+    margin-right: 40px;
+}
+
+.objects .filters .sort {
+    float: right;
+    margin-right: 0px;
+}
+
+.object-list {
+    font-size: 0px;
+    margin-left: -2.5%; /* should match li left margin */
+    vertical-align: text-top;
+    clear: both;
+}
+
+ul.object-list li {
+	display: inline-block;
+	margin: 0 0 2.5% 2.5%;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    background: #eeeeee;
+    position: relative;
+    
+}
+
+ul.object-list img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+}
+
+ul.object-list a {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+ul.object-list h3 {
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+ul.object-list li .city {
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #858585;
+}
+
+.object-info {
+    font-size: 14px;
+    padding: 10px 10px 10px;
+}
+
+.object-info .label {
+    width: 100px;
+    display: block;
+}
+
+.object-info .label {
+    width: 100px;
+    display: block;
+    float: left;
+}
+
+.object-info .levels em {color: #858585;}
+
+.object-item .price{
+    height: 55px;
+    background: #c3e1f8;
+    line-height: 55px;
+    padding: 0px 10px;
+    font-size: 30px;
+    font-weight: 300;
+    color: #09235a;
+}
+
+.object-item:hover .price{
+    background: #f2af1f;
+    color: #5a3509;
+}
+
+.object-item:hover a {
+    color: #f2af1f;
+}
+
+.object-item:hover {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+}
+
+.object-item .id {
+    position: absolute;
+    bottom: 65px;
+    right: 10px;
+    color: #858585;
+    font-size: 14px;
+}
+
+
+.objects .paging{
+    margin: 40px 0;
+}
+
+.badge {
+    width: 120px;
+    height: 55px;
+    background: no-repeat;
+    position: absolute;
+    top:10px;
+    left: -8px;
+    font-size: 15px;
+    font-weight: 300;
+    color: #FFF;
+    padding-left: 55px;
+    padding-top: 5px;
+    overflow: hidden;
+    line-height: 1.3em;
+}
+
+.badge-exclusive {
+    background: url(../images/badges.png) 0 0;
+}
+
+.badge-promotion {
+    background: url(../images/badges.png) 0 -60px;
+}
+
+
+
+/* End of objects */
 
 
 @media all and (max-width: 1150px) {
