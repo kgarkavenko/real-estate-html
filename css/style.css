@@ -674,13 +674,14 @@ section.projects .projects-container figure {
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-    margin: 0 0 2.5% 2.5%;
+    margin: 0;
 }
 
 section.projects .projects-container img {
     max-width: 100%;
 	height: auto;
     padding-bottom: 20px;
+    min-height: 160px;
 }
 
 section.projects .projects-container a {
@@ -1505,21 +1506,28 @@ a.back-link {
 }
 
 .project-inside .contacts .left{
-    width: 60%;
+    width: 61%;
     height: 500px;
     float: left;
     overflow: hidden;
 }
 
+.contacts {
+    float: left;
+    clear: both;
+    width: 98%;
+}
+
 .contacts .left .map {
-    min-width: 600px;
+    min-width: 500px;
+    width: 100%;
 }
 
 .project-inside .contacts .right {
     width: 370px;
     margin-left: 20px;
     height: 485px;
-    float: left;
+    float: right;
 }
 
 .contacts h3{
