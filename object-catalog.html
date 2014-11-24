@@ -13,6 +13,7 @@
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/menu-effects.css" />
 	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/polyfill.object-fit.css" >
 
 	
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -224,7 +225,7 @@
                     </li>
                     
                     <li class="object-item">
-                        <a href="#"><img src="images/uploads/object2.jpg" alt="Garden Apartaments"></a>
+                        <a href="#"><img src="images/uploads/test1.jpg" alt="Garden Apartaments"></a>
                         <h3><a href="#">Баласта дамбис</a></h3>
                         <span class="city">Рига</span>
                         <div class="object-info">
@@ -249,8 +250,8 @@
                         <div class="badge badge-promotion">
                             Специальное предложение
                         </div>
-                        <a href="#"><img src="images/uploads/object3.jpg" alt="Garden Apartaments"></a>
-                        <h3><a href="#">УЛИЦА ГЕРТРУДЕС</a></h3>
+                        <a href="#"><img src="images/uploads/test2.jpg" alt="Garden Apartaments"></a>
+                        <h3><a href="#">УЛИЦА ГЕРТРУДЕС УЛИЦА ГЕРТРУДЕС УЛИЦА</a></h3>
                         <span class="city">Рига</span>
                         <div class="object-info">
                             <div class="rooms">
@@ -275,14 +276,7 @@
                         <h3><a href="#">Улица Вилюма, Дзинтари</a></h3>
                         <span class="city">Юрмала</span>
                         <div class="object-info">
-                            <div class="rooms">
-                                <span class="label">Комнаты:</span>
-                                <span class="value">5</span>
-                            </div>
-                            <div class="levels">
-                                <span class="label">Этаж:</span>
-                                <span class="value">2<em></em></span>
-                            </div>
+
                             <div class="square">
                                 <span class="label">Площадь:</span>
                                 <span class="value">318.9 м&sup2;</span>
@@ -399,7 +393,14 @@
     
 <!--js-->
 <script src="js/menu-effects.js" type="text/javascript"></script>
-<script src="js/stickySidebar.js"></script>		
+<script src="js/stickySidebar.js"></script>	
+<script src="js/polyfill.object-fit.min.js"></script>
+<script>
+    objectFit.polyfill({
+        selector: 'img', // this can be any CSS selector
+        fittype: 'cover' // either contain, cover, fill or none
+    });
+</script>		
 <script>
 		$(document).ready(function() {
 	
@@ -407,5 +408,6 @@
 		
 		});
 </script>
+
 </body>
 </html>
