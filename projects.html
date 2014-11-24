@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/menu-effects.css" />
 	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/polyfill.object-fit.css" >
-
+    <script src="js/trunk8.js"></script>
 	
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -213,7 +213,7 @@
 
                     <li class="project-item zoom-images">
                         <a href="#"><img src="images/uploads/project-item2.jpg" alt="Garden Apartaments"></a>
-                        <h3><a href="#">Garden Apartaments</a></h3>
+                        <h3><a href="#" class="project-name">Garden ApartamentsGarden ApartamentsGarden ApartamentsGarden Apartaments</a></h3>
                         <p>
                             Проект “Saulkrastu Nams” представляет собой новый пятиэтажный жилой дом с очень уютными квартирами, светлыми и просторными.
                         </p>
@@ -309,8 +309,16 @@
 		$(document).ready(function() {
 	
 			$.lockfixed("#sidebar .menu",{offset: {top: 10, bottom: 600}});
-		
+            
+            $('.object-name').trunk8({
+                    lines: 2
+            });
+            
+            $('.project-name').trunk8({
+                    lines: 1
+            });
 		});
 </script>
+
 </body>
 </html>

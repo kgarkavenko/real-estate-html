@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="css/menu-effects.css" />
 	<link rel="stylesheet" href="css/jquery.modal.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/polyfill.object-fit.css" >
-
+    <script src="js/trunk8.js"></script>
 	
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
@@ -251,7 +251,7 @@
                             Специальное предложение
                         </div>
                         <a href="#"><img src="images/uploads/test2.jpg" alt="Garden Apartaments"></a>
-                        <h3><a href="#">УЛИЦА ГЕРТРУДЕС УЛИЦА ГЕРТРУДЕС УЛИЦА</a></h3>
+                        <h3><a href="#" class="object-name">УЛИЦА ГЕРТРУДЕС УЛИЦА ГЕРТРУДЕС УЛИЦАУ ЛИЦА ГЕРТРУДЕС УЛИЦА ГЕРТРУДЕС УЛИЦА</a></h3>
                         <span class="city">Рига</span>
                         <div class="object-info">
                             <div class="rooms">
@@ -405,7 +405,10 @@
 		$(document).ready(function() {
 	
 			$.lockfixed("#sidebar .menu",{offset: {top: 10, bottom: 600}});
-		
+            
+            $('.object-name').trunk8({
+                    lines: 2
+            });
 		});
 </script>
 
