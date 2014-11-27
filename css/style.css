@@ -194,6 +194,15 @@ header .black-tint {
     color: #FFF;
 }
 
+.headerimg {
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    position: absolute;
+    background-size: cover;
+}
+
 /* END of header */
 
 /* Menu */
@@ -1533,7 +1542,7 @@ a.back-link {
 
 .project-inside .contacts .right {
     width: 370px;
-    margin-left: 20px;
+    margin-left: 15px;
     height: 485px;
     float: right;
 }
@@ -1846,7 +1855,7 @@ ul.object-list li .city {
 }
 
 .content-right {
-    width: 390px;
+    width: 380px;
     margin-right: 10px;
     float: right;
     margin-top: 20px;
