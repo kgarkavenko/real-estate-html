@@ -671,7 +671,7 @@ section.projects .projects-container {
     clear: both;
     text-align: center;
     position: relative;
-    margin-left: -2.5%;
+    /*margin-left: -2.5%;*/
     font-size: 0px;
 }
 
@@ -679,11 +679,11 @@ section.projects .projects-container figure {
     display: inline-block;
     text-align: left;
     vertical-align: top;
-    width: 22.5%;
+    width: 250px !important;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-    margin: 0;
+    margin-right: 15px !important;
 }
 
 section.projects .projects-container img {
@@ -727,6 +727,7 @@ section.projects .projects-container:before:hover {
     opacity: 1;
 }
 
+.ui-carousel {width: auto !important;}
 
 /* END of Project block */
 
@@ -1146,6 +1147,8 @@ footer .contacts li.mail:before {
     padding-right: 30px;
 }
 
+
+
 h1 + a.top {
     position: absolute !important;
     right: 10px;
@@ -1250,6 +1253,7 @@ a.leave-feedback:hover {
 
 #feedback-modal {
     width: 800px;
+    margin: 50px;
 }
 
 #feedback-modal h2 {
@@ -1266,8 +1270,49 @@ a.leave-feedback:hover {
     margin-top: 60px;
     display: block;
 }
-   
+
+.fancybox-opened .fancybox-skin {
+    border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+}
+
+#sendformanswer {
+    width: 100%;
+    font-size: 18px;
+    color:green;
+    text-align: center;
+    height: 500px;
+}
+
+#sendformanswer p {
+    padding-top: 150px;
+}
+
 /* End of Feedback */
+
+
+/* Contacts */
+
+.content .contacts .content-contact{
+    float: left;
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 99%;
+}
+
+.content .contacts .consultant-card .photo {
+    width: 120px;
+    padding: 0 20px;
+}
+
+.content .contacts .consultant-card .details {
+    float: left;
+    margin-left: 0;
+    width: 450px;
+}
+
+/* End of Contacts */
+
 
 /* Projects */
 
@@ -1409,7 +1454,7 @@ a.back-link {
 .image-slider .image {
     overflow: hidden;
     text-align: center;
-    background: #555;
+    /*background: #555;*/
 }
 
 .image-slider .image img {
@@ -1460,25 +1505,43 @@ a.back-link {
     cursor: pointer;
 }
 
-.image-slider .thumbs a.next{
+/*
+.gv_panelNavNext{
     position: absolute;
     bottom: 60px;
     right: 10px;
-    height: 60px;
-    width: 40px;
-    background: url(../images/arr-fwd.png) no-repeat 12px center;
-    display: block;   
+    display: block;
+
+    height: 60px !important;
+    width: 40px !important;
+    background: url(../images/arr-fwd.png) no-repeat 12px center !important;      
+}
+*/
+
+.gv_panelNavNext{
+    border-radius: 30px !important;
+    height: 60px !important;
+    width: 60px !important;
+    background: rgba( 0, 0, 0, 0.5 ) url(../images/arr-fwd.png) no-repeat 24px center !important;;
 }
 
-.image-slider .thumbs a.back{
+.gv_panelNavPrev{
+    border-radius: 30px !important;
+    height: 60px !important;
+    width: 60px !important;
+    background: rgba( 0, 0, 0, 0.5 ) url(../images/arr-back.png) no-repeat 15px center !important;
+}
+/*
+.gv_panelNavPrev{
     position: absolute;
     bottom: 60px;
     left: 10px;
-    height: 60px;
-    width: 40px;
-    background:  url(../images/arr-back.png) no-repeat 12px center;
-    display: block;   
+    display: block;  
+    height: 60px !important;
+    width: 40px !important;
+    background:  url(../images/arr-back.png) no-repeat 12px center !important;
 }
+*/
 
 .project-inside #tabs-container {
     width: 100%;
@@ -1533,6 +1596,7 @@ a.back-link {
     float: left;
     clear: both;
     width: 98%;
+    margin-top: 30px;
 }
 
 .contacts .left .map {
@@ -1840,6 +1904,24 @@ ul.object-list li .city {
     background: url(../images/badges.png) 0 -60px;
 }
 
+.badge-sold {
+    background: url(../images/badges.png) 0 -120px;
+    width: 90px !important;
+    line-height: 40px; 
+}
+
+.badge-new {
+    background: url(../images/badges.png) 0 -180px;
+    width: 90px !important;
+    line-height: 40px;
+}
+
+.badge-rented {
+    background: url(../images/badges.png) 0 -240px;
+    width: 90px !important;
+    line-height: 40px;
+}
+
 
 /* End of objects */
 
@@ -1852,6 +1934,15 @@ ul.object-list li .city {
 
 .content-left p {
     clear: both;
+}
+
+.content-left pre {
+    word-wrap: break-word;
+}
+
+.content-left strong {
+    font-weight: bold;
+    color: #000;
 }
 
 .content-right {
@@ -1942,6 +2033,8 @@ ul.object-list li .city {
     padding-left: 10px;
 }
 
+
+
 /* Objects inside */
 
 
@@ -1951,18 +2044,23 @@ ul.object-list li .city {
     
 h1 {
     font-size: 30px;;
-}    
-/*    
+}   
+    
+section.projects {
+    width: 840px;
+}
+   
 section.projects .projects-container figure {
     width: 260px;
 }
 section.projects .projects-container figure:last-child {
     display: none;
 }
-*/
+    
+#top-items {width: 100% !important;}
     
 .service ul li {
-    font-size: 18px;;
+    font-size: 18px;
 }
     
 ul.menu li {
@@ -1971,7 +2069,7 @@ ul.menu li {
 }
     
 .project-inside .tabs-menu li {
-    font-size: 16px;;
+    font-size: 16px;
 }
     
 }
